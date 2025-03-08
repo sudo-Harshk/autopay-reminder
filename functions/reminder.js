@@ -4,10 +4,14 @@ require("dotenv").config();
 
 // 🔹 Initialize Firebase
 console.log("🟢 Initializing Firebase...");
-const serviceAccount = require("./serviceAccountKey.json"); // Make sure this file exists!
+const serviceAccountBase64 = process.env.GCP_SERVICE_ACCOUNT;
+const serviceAccount = JSON.parse(Buffer.from(serviceAccountBase64, "base64").toString("utf-8"));
+
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
+
+
 const db = admin.firestore();
 console.log("✅ Firebase Initialized");
 

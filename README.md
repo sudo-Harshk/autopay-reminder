@@ -5,5 +5,3 @@ This project helps users set reminders for autopay bills and other recurring pay
 ## Features
 - Set reminders for upcoming payments.
 - Easy to use and configure.
-
-Demo
