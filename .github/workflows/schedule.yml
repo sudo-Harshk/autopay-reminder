@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '0 9 * * *'  # Runs every day at 9 AM UTC
 
-  workflow_dispatch: # Allows manual trigger
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
   run-reminder:
@@ -20,9 +20,13 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          cd functions
+          npm install  # ✅ This installs firebase-admin and other dependencies
 
       - name: Run Reminder Script
         env:
           GCP_SERVICE_ACCOUNT: ${{ secrets.GCP_SERVICE_ACCOUNT }}
-        run: node functions/reminder.js
+        run: |
+          cd functions
+          node reminder.js  # ✅ Ensure script runs in the correct directory
