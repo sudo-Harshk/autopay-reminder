@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPay Reminder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔔 AutoPay Reminder</h1>
+
+        <!-- Add New Payment Form -->
+        <div id="add-payment-form">
+            <input type="text" id="serviceName" placeholder="Service Name (e.g., Netflix)" required>
+            <input type="date" id="dueDate" required>
+            <select id="category">
+                <option value="Bills">Bills</option>
+                <option value="Subscriptions">Subscriptions</option>
+                <option value="Loans">Loans</option>
+            </select>
+            <button id="addPayment">➕ Add Reminder</button>
+        </div>
+
+        <!-- Display Pending Payments -->
+        <h2>Pending Payments</h2>
+        <ul id="paymentList"></ul>
+
+        <!-- Display Paid Payments -->
+        <h2>✅ Paid Payments</h2>
+        <ul id="paidList"></ul>
+    </div>
+
+    <!-- Load Firebase and Scripts -->
+    <script src="firebase.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

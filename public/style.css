@@ -1,0 +1,183 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #ecf0f1;  /* Light gray background */
+    color: #2c3e50;  /* Dark gray text for readability */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+h1 {
+    font-size: 32px;
+    color: #3498db;  /* Primary blue */
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+#add-payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input & Select Styling */
+input, select, button {
+    padding: 14px 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #2980b9;  /* Focus border blue */
+}
+
+input, select {
+    background-color: #ecf0f1;  /* Light gray background for inputs */
+}
+
+/* Add Payment Button */
+button {
+    background-color: #3498db;  /* Primary blue */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2980b9;  /* Darker blue on hover */
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* List Styling */
+h2 {
+    font-size: 24px;
+    color: #2c3e50;  /* Dark gray text */
+    margin-top: 40px;
+}
+
+#paymentList {
+    list-style: none;
+    padding: 0;
+}
+
+#paymentList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    padding: 16px 24px;
+    margin: 12px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#paymentList li:hover {
+    background-color: #ecf0f1;  /* Slight background change on hover */
+}
+
+/* Category Labels */
+.payment-category {
+    font-weight: bold;
+    color: #1abc9c;  /* Teal for categories */
+}
+
+.payment-details {
+    font-size: 14px;
+    color: #7f8c8d;  /* Soft gray for text details */
+}
+
+.payment-details span {
+    display: block;
+    margin-top: 4px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .container {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #add-payment-form {
+        gap: 15px;
+    }
+
+    #paymentList li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .payment-details span {
+        margin-top: 10px;
+    }
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Exact Colors for Each Category */
+.badge-bills { background-color: #6c8cff; }  /* Blue */
+.badge-loans { background-color: #f4c363; }  /* Yellow/Orange */
+.badge-subscriptions { background-color: #c68ff6; }  /* Purple */
+
+/* Paid Payments Styling */
+.paid-item {
+    background: #e9fce9;  /* Light green */
+    color: #2ecc71;  /* Green text */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 8px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Checkmark Icon */
+.checkmark {
+    background: #a5d6a7;
+    color: #2e7d32;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+}
